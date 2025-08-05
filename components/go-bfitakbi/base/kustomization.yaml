@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-bfitakbi
+  janus-idp.io/tekton: go-bfitakbi
+  backstage.io/kubernetes-id: go-bfitakbi
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-bfitakbi
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
